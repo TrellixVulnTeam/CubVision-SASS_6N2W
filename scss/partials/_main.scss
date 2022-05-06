@@ -1,0 +1,161 @@
+/* MAIN */
+.grid-main {
+    display: grid;
+    grid-template-areas:
+        "prod-1 text-1"
+        "text-2 prod-2"
+        "prod-3 text-3";
+
+    .prod-1 {
+        grid-area: prod-1;
+        max-width: fit-content;
+    }
+
+    .prod-2 {
+        grid-area: prod-2;
+        max-width: fit-content;
+    }
+
+    .prod-3 {
+        grid-area: prod-3;
+        max-width: fit-content;
+    }
+
+    .text-1 {
+        grid-area: text-1;
+        margin-top: 90px;
+        width: 100%;
+    }
+
+    .text-2 {
+        grid-area: text-2;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .text-3 {
+        grid-area: text-3;
+        margin-top: 140px;
+        width: 100%;
+    }
+}
+
+
+/*FORMULARIO*/
+
+.div-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.div-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #2eb9e4, #634be9);
+    max-width: 700px;
+    width: 100%;
+    padding: 10px 25px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+}
+.div-container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    color: #ccc;
+}
+
+.div-container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #2b2e2d;
+}
+
+.div-container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    color: #ccc;
+}
+
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2- 20px);
+}
+
+.user-details .input-box details {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #424947;
+}
+.div-newsletter {
+    display: flex;
+    justify-content: center;
+}
+
+.div-inputs input {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    letter-spacing: 1px;
+    background: linear-gradient(to left, #2eb9e4, #634be9);
+    padding: 5px;
+    margin: 5px;
+}
+
+.div-inputs input:hover {
+    background: linear-gradient(to top, #2eb9e4, #634be9);
+}
+
+/* MAPA DE GOOGLE */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    margin-top: 10px;
+
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}

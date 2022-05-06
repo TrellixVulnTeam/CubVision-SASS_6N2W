@@ -1,0 +1,57 @@
+/*HEADER*/
+$color-nav: linear-gradient(to right,
+#050505,
+#1d3a8a 50%,
+rgb(255, 255, 255) 50%);
+
+header {
+    background: linear-gradient(to right, #0a141d, #275a8d);
+    flex-direction: row;
+    display: flex;
+    text-decoration: none;
+    /* NAV */
+    nav {
+        display: flex;
+        width: 100%;
+        margin-top: 40px;
+        .nav-ul a {
+            background-image: $color-nav;
+            background-size: 200% 100%;
+            background-position: -100%;
+            display: row;
+            padding: 5px 0;
+            position: relative;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease-in-out;
+            font-family: 'Poppins', sans-serif;
+            font-size: large;
+            padding: 10px;
+        }
+        .nav-ul a:before {
+            background: linear-gradient(to right,
+                    #050505,
+                    #1d3a8a);
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-ul a:hover {
+            background-position: 0;
+        }
+        .nav-ul a:hover::before {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
