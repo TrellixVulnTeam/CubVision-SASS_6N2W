@@ -1,0 +1,10 @@
+@import "../variables/variables";
+
+@mixin flexibilizar-posicion{
+    display: flex;
+    position: relative;
+}
+@mixin tamaño-mapa{
+    width: $ancho;
+    height: $alto-mapa;
+}

@@ -2,15 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Glitch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+.nav-footer, header {
+  display: flex;
+  width: 100%;
+  background-color: #0a141d; }
+
 header {
-  background: linear-gradient(to right, #0a141d, #275a8d);
   flex-direction: row;
   display: flex;
   text-decoration: none;
   /* NAV */ }
   header nav {
-    display: flex;
-    width: 100%;
     margin-top: 40px; }
     header nav .nav-ul a {
       background-image: linear-gradient(to right, #050505, #1d3a8a 50%, white 50%);
@@ -22,28 +24,28 @@ header {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transition: all 0.3s ease-in-out;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       font-size: large;
       padding: 10px; }
-    header nav .nav-ul a:before {
-      background: linear-gradient(to right, #050505, #1d3a8a);
-      display: block;
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 3px;
-      transition: all 0.3s ease-in-out; }
-    header nav .nav-ul a:hover {
-      background-position: 0; }
-    header nav .nav-ul a:hover::before {
-      width: 100%; }
+      header nav .nav-ul a:before {
+        background: linear-gradient(to right, #050505, #1d3a8a);
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out; }
+        header nav .nav-ul a:before:hover {
+          background-position: 0; }
+          header nav .nav-ul a:before:hover::before {
+            width: 100%; }
+
+.pie-pagina {
+  background-color: #0a141d;
+  width: 100%; }
 
 /* FOOTER*/
-.pie-pagina {
-  width: 100%;
-  background-color: #0a141d; }
-
 .pie-pagina .grupo-1 {
   width: 100%;
   max-width: 1200px;
@@ -140,7 +142,7 @@ header {
   max-width: 700px;
   width: 100%;
   padding: 10px 25px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 10px; }
 
 .div-container .title {
@@ -167,7 +169,7 @@ header {
 
 form .user-details .input-box {
   margin-bottom: 15px;
-  width: calc(100% / 2- 20px); }
+  width: calc($ancho / 2- 20px); }
 
 .user-details .input-box details {
   font-weight: 500;
@@ -229,7 +231,7 @@ form .user-details .input-box {
 .title-1 {
   display: flex;
   flex-direction: row;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   box-shadow: inset #54b3d6;
   color: #54b3d6;
   margin: 0 -.25rem;
@@ -257,7 +259,7 @@ form .user-details .input-box {
   position: relative;
   text-align: center;
   color: #54b3d6;
-  font-family: 'Poppins', sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 .subtitle-1::before {
   content: '';
@@ -303,3 +305,16 @@ form .user-details .input-box {
 
 h3 {
   padding-top: 30px; }
+
+.nav-footer, header {
+  display: flex;
+  width: 100%;
+  background-color: #0a141d; }
+
+.pie-pagina {
+  background-color: #0a141d;
+  width: 100%; }
+
+* {
+  margin: 0;
+  padding: 0; }

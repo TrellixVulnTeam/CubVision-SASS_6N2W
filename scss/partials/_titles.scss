@@ -1,8 +1,10 @@
 /*Titutlos y subtitulos*/
+@import "../variables/variables";
+
 .title-1 {
     display: flex;
     flex-direction: row;
-    font-family: 'Poppins', sans-serif;
+    font-family: $font;
     box-shadow: inset #54b3d6;
     color: #54b3d6;
     margin: 0 -.25rem;
@@ -32,9 +34,9 @@
 
 .subtitle-1 {
     position: relative;
-    text-align: center;
+    text-align: $alinear-al-centro;
     color: #54b3d6;
-    font-family: 'Poppins', sans-serif;
+    font-family: $font;
 }
 
 .subtitle-1::before {
@@ -59,7 +61,7 @@
 
 .subtitle-2 {
     position: relative;
-    text-align: center;
+    text-align: $alinear-al-centro;
     color: #54b3d6;
     margin-bottom: 30px;
 }

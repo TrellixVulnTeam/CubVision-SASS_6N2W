@@ -1,11 +1,11 @@
+@import "../variables/variables";
+@import "../sass2/maps";
+
 /* FOOTER*/
-.pie-pagina {
-    width: 100%;
-    background-color: #0a141d;
-}
+
 
 .pie-pagina .grupo-1 {
-    width: 100%;
+    width: $ancho;
     max-width: 1200px;
     margin: auto;
     display: grid;
@@ -15,11 +15,11 @@
 }
 
 .pie-pagina .grupo-1 .box figure {
-    width: 100%;
+    width: $ancho;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $alinear-al-centro;
+    align-items: $alinear-al-centro;
 }
 
 .pie-pagina .grupo-1 .box figure img {

@@ -1,4 +1,6 @@
 /* MAIN */
+@import "../variables/variables";
+
 .grid-main {
     display: grid;
     grid-template-areas:
@@ -24,19 +26,19 @@
     .text-1 {
         grid-area: text-1;
         margin-top: 90px;
-        width: 100%;
+        width: $ancho;
     }
 
     .text-2 {
         grid-area: text-2;
         margin-left: 10px;
-        width: 100%;
+        width: $ancho;
     }
 
     .text-3 {
         grid-area: text-3;
         margin-top: 140px;
-        width: 100%;
+        width: $ancho;
     }
 }
 
@@ -45,8 +47,8 @@
 
 .div-center {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: $alinear-al-centro;
+    justify-content: $alinear-al-centro;
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -55,13 +57,13 @@
     display: flex;
     flex-direction: column;
     height: 500px;
-    justify-content: center;
-    align-items: center;
+    justify-content: $alinear-al-centro;
+    align-items: $alinear-al-centro;
     background: linear-gradient(to right, #2eb9e4, #634be9);
     max-width: 700px;
-    width: 100%;
+    width: $ancho;
     padding: 10px 25px;
-    font-family: 'Poppins', sans-serif;
+    font-family: $font;
     border-radius: 10px;
 }
 .div-container .title {
@@ -92,7 +94,7 @@
 
 form .user-details .input-box {
     margin-bottom: 15px;
-    width: calc(100% / 2- 20px);
+    width: calc($ancho / 2- 20px);
 }
 
 .user-details .input-box details {
@@ -103,7 +105,7 @@ form .user-details .input-box {
 
 .user-details .input-box input {
     height: 45px;
-    width: 100%;
+    width: $ancho;
     outline: none;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -120,7 +122,7 @@ form .user-details .input-box {
 }
 .div-newsletter {
     display: flex;
-    justify-content: center;
+    justify-content: $alinear-al-centro;
 }
 
 .div-inputs input {
@@ -128,7 +130,7 @@ form .user-details .input-box {
     justify-content: space-evenly;
     border-radius: 30px;
     height: 100%;
-    width: 100%;
+    width: $ancho;
     outline: none;
     color: #fff;
     border: none;
@@ -156,6 +158,6 @@ form .user-details .input-box {
     left: 0;
     top: 0;
     height: 100%;
-    width: 100%;
+    width: $ancho;
     position: absolute;
 }
