@@ -1,10 +1,11 @@
 /*Titutlos y subtitulos*/
 @import "../variables/variables";
+@import "../sass2/mixins";
+
 
 .title-1 {
-    display: flex;
+    @include titulos;
     flex-direction: row;
-    font-family: $font;
     box-shadow: inset #54b3d6;
     color: #54b3d6;
     margin: 0 -.25rem;
@@ -13,78 +14,80 @@
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 50px;
+    &::before {
+        content: '_>';
+        position: relative;
+        left: 0;
+        bottom: 0;
+        font-size: xx-large;
+        margin-right: 5px;
+        height: 3px;
+        width: 30px;
+    
+    }
+    &:hover {
+        box-shadow: inset 5
+        30px 0 0 0 #54b3d6;
+        color: rgb(252, 252, 252);
+    }
 }
 
-.title-1::before {
-    content: '_>';
-    position: relative;
-    left: 0;
-    bottom: 0;
-    font-size: xx-large;
-    margin-right: 5px;
-    height: 3px;
-    width: 30px;
 
-}
-
-.title-1:hover {
-    box-shadow: inset 430px 0 0 0 #54b3d6;
-    color: rgb(252, 252, 252);
-}
 
 .subtitle-1 {
     position: relative;
-    text-align: $alinear-al-centro;
+    text-align: center;
     color: #54b3d6;
-    font-family: $font;
+    font-family: 'Poppins', sans-serif;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 362.5px;
+        height: 4px;
+        border-radius: 4px;
+        color: #54b3d6;
+        background-color: #54b3d6;
+        bottom: 0;
+        left: 770px;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;   
+    }
+    &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
 }
 
-.subtitle-1::before {
-    content: '';
-    position: absolute;
-    width: 362.5px;
-    height: 4px;
-    border-radius: 4px;
-    color: #54b3d6;
-    background-color: #54b3d6;
-    bottom: 0;
-    left: 770px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-}
 
-.subtitle-1:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
 
 .subtitle-2 {
     position: relative;
-    text-align: $alinear-al-centro;
+    text-align: center;
     color: #54b3d6;
     margin-bottom: 30px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 700px;
+        height: 4px;
+        border-radius: 4px;
+        color: #54b3d6;
+        background-color: #54b3d6;
+        bottom: 0;
+        left: 600px;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+    
+    &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
 }
 
-.subtitle-2::before {
-    content: '';
-    position: absolute;
-    width: 700px;
-    height: 4px;
-    border-radius: 4px;
-    color: #54b3d6;
-    background-color: #54b3d6;
-    bottom: 0;
-    left: 600px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-}
 
-.subtitle-2:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
 
 h3 {
     padding-top: 30px;

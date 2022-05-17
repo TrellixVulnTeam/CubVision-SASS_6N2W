@@ -1,0 +1,103 @@
+@import "../variables/variables";
+
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px){
+
+    /*HEADER*/
+    header {
+        display: $contenido-flexible;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*NAV*/
+    nav {
+        display: $contenido-flexible;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-ul {
+        display: $contenido-flexible;
+        flex-wrap: wrap;
+    }
+
+    /*MAIN*/
+    .grid-main {
+        display: grid;
+        grid-template-areas:
+            "prod-1"
+            "text-1"
+            "prod-2"
+            "text-2"
+            "prod-3"
+            "text-3";
+    }
+
+    .prod-1 {
+        grid-area: prod-1;
+        width: 100%;
+    }
+
+    .prod-2 {
+        grid-area: prod-2;
+        width: 100%;
+
+    }
+
+    .prod-3 {
+        grid-area: prod-3;
+        width: 100%;
+    }
+
+    .text-1{
+        margin-left: 10px;
+    }
+
+    .text-3{
+        margin-left: 10px;
+    }
+    /*FORMULARIO*/
+    .form-responsive {
+        overflow: hidden;
+        position: relative;
+        height: 0;
+    }
+
+    .form-responsive form {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    /*MAPA DE GOOGLE*/
+    .map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+
+    }
+
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}

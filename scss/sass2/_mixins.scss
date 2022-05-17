@@ -4,7 +4,9 @@
     display: flex;
     position: relative;
 }
-@mixin tamaño-mapa{
-    width: $ancho;
-    height: $alto-mapa;
+
+@mixin titulos($color-title:#54b3d6, $display-title: flex){
+    font-family: $font;
+    display: $display-title;
+    color: $color-title;
 }

@@ -7,48 +7,48 @@ header {
     flex-direction: row;
     display: flex;
     text-decoration: none;
-    /* NAV */
-    nav {
-        margin-top: 40px;
-        .nav-ul a {
-            background-image: $color-nav;
-            background-size: 200% 100%;
-            background-position: -100%;
-            display: row;
-            padding: 5px 0;
-            position: relative;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.3s ease-in-out;
-            font-family: $font;
-            font-size: large;
-            padding: 10px;
-            &:before {
-                background: linear-gradient(to right,
-                        #050505,
-                        #1d3a8a);
-                display: block;
-                position: absolute;
-                bottom: -3px;
-                left: 0;
-                width: 0;
-                height: 3px;
-                transition: all 0.3s ease-in-out;
-                &:hover {
-                    background-position: 0;
-                    
-                    &::before {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-
-    }
 }
 
+    /* NAV */
+nav {
+    margin-top: 40px;
+    .nav-ul a {
+        background-image: linear-gradient(to right,
+        #fdfdfd,
+        #1b1ed3 50%,
+        rgb(255, 255, 255) 50%);
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: row;
+        padding: 5px 0;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+        font-family: $font;
+        font-size: large;
+        padding: 10px;
+        &:before {
+            background: linear-gradient(to right,
+                    #ffffff,
+                    #1241ff);
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+            background-position: 0;
 
+        }              
+        &:hover::before {
+            width: 100%;
+        }
+    }
+}
 
 
 

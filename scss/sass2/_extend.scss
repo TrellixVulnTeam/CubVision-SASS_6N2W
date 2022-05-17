@@ -1,8 +1,7 @@
 @import "../variables/variables";
 
-
 .nav-footer{
     display: $contenido-flexible;
     width: $ancho;
-    background-color: $color-footer;
+    background: $color-footer;
 }

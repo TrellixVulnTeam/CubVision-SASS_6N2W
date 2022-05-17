@@ -42,6 +42,16 @@
     }
 }
 
+/* PATROCINADORES */
+aside {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
 
 /*FORMULARIO*/
 
@@ -66,22 +76,24 @@
     font-family: $font;
     border-radius: 10px;
 }
+
 .div-container .title {
     font-size: 25px;
     font-weight: 500;
     position: relative;
     color: #ccc;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        background: #2b2e2d;
+    }
 }
 
-.div-container .title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    background: #2b2e2d;
-}
 
 .div-container form .user-details {
     display: flex;
@@ -120,6 +132,7 @@ form .user-details .input-box {
 .user-details .input-box input:valid {
     border-color: #424947;
 }
+
 .div-newsletter {
     display: flex;
     justify-content: $alinear-al-centro;
@@ -138,11 +151,12 @@ form .user-details .input-box {
     background: linear-gradient(to left, #2eb9e4, #634be9);
     padding: 5px;
     margin: 5px;
+
+    &:hover {
+        background: linear-gradient(to top, #2eb9e4, #634be9);
+    }
 }
 
-.div-inputs input:hover {
-    background: linear-gradient(to top, #2eb9e4, #634be9);
-}
 
 /* MAPA DE GOOGLE */
 .map-responsive {
@@ -152,12 +166,170 @@ form .user-details .input-box {
     height: 0;
     margin-top: 10px;
 
+    .map-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
 }
 
-.map-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: $ancho;
-    position: absolute;
+
+// APARTADO DE PRODUCTOS
+
+* {
+    box-sizing: border-box;
 }
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+section h2 {
+    width: 100%;
+    color: #999;
+    font-family: monospace;
+}
+
+.card {
+    width: 33.333333%;
+}
+
+
+/* Cards de productos */
+.estilo-producto {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.estilo-producto .img-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.estilo-producto .img-container img {
+    width: 100%;
+}
+
+.estilo-producto .img-container .price {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: white;
+    padding: 15px;
+}
+
+.estilo-producto .img-container .favorite {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.estilo-producto .img-container .favorite svg {
+    transform: translatey(14px);
+}
+
+.estilo-producto .img-container .favorite:hover {
+    background: red;
+}
+
+.estilo-producto .img-container .favorite:hover svg {
+    fill: white;
+}
+
+.estilo-producto a {
+    display: inline-block;
+    margin-top: 2px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.estilo-producto a:hover {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+/*Estilo producto rebajas*/
+.estilo-rebaja {
+    font-family: sans-serif;
+    width: 30%;
+}
+
+.estilo-rebaja .img-container {
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.estilo-rebaja .img-container img {
+    width: 105%;
+    position: absolute;
+    top: -60%;
+    transition: all 0.5s;
+}
+
+.estilo-rebaja:hover .img-container img {
+    transform: scale(1.2);
+}
+
+.estilo-rebaja .img-container .promo {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: yellow;
+    padding: 15px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.estilo-rebaja .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.estilo-rebaja .info-container h3 {
+    margin: 0;
+}
+
+.estilo-rebaja .info-container h3,
+.estilo-rebaja .info-container strong,
+.estilo-rebaja .info-container span {
+    padding: 5px 15px;
+    width: 100%;
+}
+
+.estilo-rebaja .add-cart {
+    margin-top: 2px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+    &:hover {
+        color: black;
+        background-color: transparent;
+        border: 1px solid black;
+    }
+}
+
