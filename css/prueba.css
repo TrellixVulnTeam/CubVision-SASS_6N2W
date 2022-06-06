@@ -235,6 +235,9 @@ form .user-details .input-box {
 * {
   box-sizing: border-box; }
 
+main .grid-products {
+  display: grid; }
+
 section {
   width: 100%;
   display: flex;
@@ -251,18 +254,18 @@ section h2 {
   width: 33.333333%; }
 
 /* Cards de productos */
-.estilo-producto {
+.card-estilo-producto {
   font-family: sans-serif;
   text-align: center; }
 
-.estilo-producto .img-container {
+.card-estilo-producto .img-container {
   overflow: hidden;
   position: relative; }
 
-.estilo-producto .img-container img {
+.card-estilo-producto .img-container img {
   width: 100%; }
 
-.estilo-producto .img-container .price {
+.card-estilo-producto .img-container .price {
   position: absolute;
   top: 10px;
   left: 0;
@@ -270,7 +273,7 @@ section h2 {
   background: white;
   padding: 15px; }
 
-.estilo-producto .img-container .favorite {
+.card-estilo-producto .img-container .favorite {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -280,50 +283,50 @@ section h2 {
   width: 50px;
   cursor: pointer; }
 
-.estilo-producto .img-container .favorite svg {
+.card-estilo-producto .img-container .favorite svg {
   transform: translatey(14px); }
 
-.estilo-producto .img-container .favorite:hover {
+.card-estilo-producto .img-container .favorite:hover {
   background: red; }
 
-.estilo-producto .img-container .favorite:hover svg {
+.card-estilo-producto .img-container .favorite:hover svg {
   fill: white; }
 
-.estilo-producto a {
+.card-estilo-producto a {
   display: inline-block;
   margin-top: 2px;
   text-decoration: none;
   color: white;
   background-color: black;
   padding: 15px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  margin-bottom: 10px; }
 
-.estilo-producto a:hover {
+.card-estilo-producto a:hover {
   color: black;
   background-color: transparent;
   border: 1px solid black; }
 
 /*Estilo producto rebajas*/
-.estilo-rebaja {
-  font-family: sans-serif;
-  width: 30%; }
+.card-estilo-rebaja {
+  font-family: sans-serif; }
 
-.estilo-rebaja .img-container {
+.card-estilo-rebaja .img-container {
   overflow: hidden;
   height: 250px;
   position: relative;
   border-radius: 15px; }
 
-.estilo-rebaja .img-container img {
+.card-estilo-rebaja .img-container img {
   width: 105%;
-  position: absolute;
+  height: 100%;
   top: -60%;
   transition: all 0.5s; }
 
-.estilo-rebaja:hover .img-container img {
+.card-estilo-rebaja:hover .img-container img {
   transform: scale(1.2); }
 
-.estilo-rebaja .img-container .promo {
+.card-estilo-rebaja .img-container .promo {
   position: absolute;
   top: 10px;
   left: 0;
@@ -334,22 +337,22 @@ section h2 {
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px; }
 
-.estilo-rebaja .info-container {
+.card-estilo-rebaja .info-container {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   justify-content: center; }
 
-.estilo-rebaja .info-container h3 {
+.card-estilo-rebaja .info-container h3 {
   margin: 0; }
 
-.estilo-rebaja .info-container h3,
-.estilo-rebaja .info-container strong,
-.estilo-rebaja .info-container span {
+.card-estilo-rebaja .info-container h3,
+.card-estilo-rebaja .info-container strong,
+.card-estilo-rebaja .info-container span {
   padding: 5px 15px;
   width: 100%; }
 
-.estilo-rebaja .add-cart {
+.card-estilo-rebaja .add-cart {
   margin-top: 2px;
   text-decoration: none;
   color: white;
@@ -357,7 +360,7 @@ section h2 {
   padding: 15px;
   border: 1px solid black;
   border-radius: 25px; }
-  .estilo-rebaja .add-cart:hover {
+  .card-estilo-rebaja .add-cart:hover {
     color: black;
     background-color: transparent;
     border: 1px solid black; }
@@ -414,7 +417,9 @@ section h2 {
 .subtitle-2 {
   position: relative;
   text-align: center;
-  color: #54b3d6;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  color: #5050c2;
   margin-bottom: 30px; }
   .subtitle-2::before {
     content: '';
@@ -500,7 +505,17 @@ h3 {
     top: 0;
     height: 100%;
     width: 100%;
-    position: absolute; } }
+    position: absolute; }
+  p {
+    margin-left: 10px; }
+  /* PRODUCTOS */
+  section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 50px 0;
+    flex-direction: column; } }
 
 .nav-footer, header {
   display: flex;

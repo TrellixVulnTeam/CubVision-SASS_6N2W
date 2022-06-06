@@ -64,7 +64,7 @@
 .subtitle-2 {
     position: relative;
     text-align: center;
-    color: #54b3d6;
+    @include titulos($color-title: rgb(80, 80, 194))
     margin-bottom: 30px;
     &::before {
         content: '';
@@ -86,8 +86,6 @@
         transform: scaleX(1);
     }
 }
-
-
 
 h3 {
     padding-top: 30px;
